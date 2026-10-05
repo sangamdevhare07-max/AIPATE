@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>MyAI Pet — Riya</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="app">
+  <aside class="sidebar">
+    <div class="brand"><div class="paw">🐾</div><div><b>MyAI Pet</b><span>Your Virtual Friend, Always</span></div></div>
+    <div class="profile">
+      <div class="avatar">🐺</div>
+      <div class="pinfo"><strong>Riya <small>♛</small></strong><span>Lv. <span id="levelSide">3</span></span><div class="xpmini"><i id="xpMini"></i></div><em id="xpTextSide">245 / 500 XP</em></div>
+    </div>
+    <nav>
+      <button class="nav active" data-section="home">⌂ <span>Home</span></button>
+      <button class="nav" data-section="chat">💬 <span>Chat</span></button>
+      <button class="nav" data-section="care">🐾 <span>Pet Care</span></button>
+      <button class="nav" data-section="inventory">🧰 <span>Inventory</span></button>
+      <button class="nav" data-section="memory">🧠 <span>Memory</span></button>
+      <button class="nav" data-section="evolution">🧬 <span>Evolution</span></button>
+      <button class="nav" data-section="settings">⚙ <span>Settings</span></button>
+    </nav>
+    <div class="quote">“A little care<br>goes a long way...” <b>🐾</b></div>
+  </aside>
+
+  <main class="main">
+    <header>
+      <div class="welcome"><span class="sun">☀️</span><div><h2>Good Evening, Sangam!</h2><p>Your pet is waiting for you... <b>♥</b></p></div></div>
+      <div class="topicons"><span>♧</span><div class="userdot">S</div><strong>Sangam⌄</strong></div>
+    </header>
+
+    <section id="home" class="section active">
+      <div class="dashboard-grid">
+        <div class="pet-card card">
+          <div class="pet-head"><div><h1>Riya <span>✎</span></h1><p>Your AI Pet Companion</p></div><div class="mood">😊 <b>Happy</b> ♥</div></div>
+          <div class="pet-stage">
+            <div class="glow"></div>
+            <div class="pet">🐺</div>
+            <div class="speech">Hey Sangam!<br>I'm hungry...<br>Can you feed me? 🥺</div>
+          </div>
+          <div class="stats">
+            <div class="stat"><span>🍖</span><b>Hunger</b><strong id="hunger">72%</strong><i><em id="hungerBar"></em></i></div>
+            <div class="stat"><span>⚡</span><b>Energy</b><strong id="energy">84%</strong><i><em id="energyBar"></em></i></div>
+            <div class="stat"><span>😊</span><b>Happiness</b><strong id="happy">91%</strong><i><em id="happyBar"></em></i></div>
+            <div class="stat"><span>💧</span><b>Cleanliness</b><strong id="clean">76%</strong><i><em id="cleanBar"></em></i></div>
+            <div class="stat"><span>♥</span><b>Friendship</b><strong id="friend">67%</strong><i><em id="friendBar"></em></i></div>
+          </div>
+          <div class="actions">
+            <button data-action="feed">🍖<small>Feed</small></button><button data-action="play">🎮<small>Play</small></button><button data-action="sleep">🌙<small>Sleep</small></button><button data-action="pet">♥<small>Pet</small></button><button data-action="gift">🎁<small>Gift</small></button>
+          </div>
+        </div>
+
+        <div class="chat-card card">
+          <div class="chat-head"><div><h2>✣ Talk to Riya</h2><p>She can hear you, type or use voice!</p></div><button id="voice">🎙</button></div>
+          <div class="messages" id="messages">
+            <div class="msg user">Hey Riya! 🥰</div>
+            <div class="msg pet"><span>🐺</span><div>Hey Sangam! 💙<br>I missed you! Give me some food please... I'm so hungry! 🥺</div></div>
+            <div class="msg user">Okay, coming! 😊</div>
+            <div class="msg pet"><span>🐺</span><div>Yayyy! Thank you! You're the best!<br>Let's play after I eat! 🐾🎮</div></div>
+          </div>
+          <form id="chatForm"><input id="chatInput" placeholder="Type a message..." autocomplete="off"><button type="button" id="mic">🎙</button><button>➤</button></form>
+        </div>
+
+        <div class="right-stack">
+          <div class="card mini-card"><h3>Today's Activities</h3><div class="activity"><span>🍖</span>Fed <b>2 times</b></div><div class="activity"><span>🎮</span>Played <b>1 time</b></div><div class="activity"><span>♥</span>Talked <b>5 times</b></div><div class="activity"><span>🌙</span>Slept <b>8 hours</b></div></div>
+          <div class="card mini-card memory"><h3>🧠 Pet Memory</h3><p>“You told me you love coding, AI and futuristic tech. I'll always remember that! 💙”</p></div>
+          <div class="card mini-card level"><h3>⭐ XP & Level <span>›</span></h3><p>Lv. <b id="level">3</b> <span id="xpText">245 / 500 XP</span></p><div class="levelbar"><i id="xpBar"></i></div></div>
+        </div>
+      </div>
+
+      <div class="card evolution"><div class="evtitle"><span>🐾</span><div><h2>Evolution Journey</h2><p>Take care of your pet and<br>watch it grow!</p></div></div>
+        <div class="stages"><div>🐕<b>Baby Pet</b><small>(0 - 5 days)</small></div><i>→</i><div>🐺<b>Young Pet</b><small>(6 - 15 days)</small></div><i>→</i><div>🐺<b>Adult Pet</b><small>(16 - 30 days)</small></div><i>→</i><div class="special">🐺<b>AI Companion</b><small>(31 - 60 days)</small></div><i>→</i><div class="legend">🐺<b>Legendary Pet</b><small>(After 60 days)</small></div></div>
+      </div>
+
+      <div class="bottom-grid">
+        <div class="card features"><h2>⭐ Key Features</h2><div class="feature-grid">
+          <div><span>💬</span><b>AI Conversation</b><small>Natural & emotional responses</small></div><div><span>🧠</span><b>Memory System</b><small>Remembers you and your chats</small></div><div><span>😊</span><b>Needs System</b><small>Hunger, energy, happiness + more</small></div><div><span>🙂</span><b>Emotions</b><small>Happy, sad, angry, excited, sleepy...</small></div><div><span>🎮</span><b>Actions</b><small>Feed, play, sleep, pet, talk, give gifts</small></div><div><span>🐾</span><b>Evolution</b><small>Grow from baby to legend</small></div>
+        </div></div>
+        <div class="card tech"><h2>&lt;/&gt; Tech Stack</h2><div class="tech-grid"><span>HTML<br><b>5</b></span><span>CSS<br><b>3</b></span><span>JS<br><b>JS</b></span><span>🐍 Python<br><small>(Django)</small></span><span>🗄 SQLite</span><span>🎙 Speech API<br><small>(Voice Input/Output)</small></span><span>🗃 Memory<br><small>(SQLite)</small></span><span>☁ Render / Vercel<br><small>(Deployment)</small></span></div></div>
+      </div>
+      <div class="footer-banner">🐾 <div><h2>Build Your Own AI Pet</h2><p>Not just a pet... A companion for life. 💙</p></div><em>Because every great journey<br>needs a loyal friend... 🐾</em></div>
+    </section>
+
+    <section id="chat" class="section page-card"><h1>💬 Chat with Riya</h1><p>Talk naturally with your AI companion.</p><div class="large-chat card"><div class="messages" id="messages2"></div><form id="chatForm2"><input id="chatInput2" placeholder="Say something to Riya..."><button>Send ➤</button></form></div></section>
+    <section id="care" class="section page-card"><h1>🐾 Pet Care</h1><p>Keep Riya happy, healthy and energetic.</p><div class="care-grid card"><button data-action="feed">🍖 Feed</button><button data-action="play">🎮 Play</button><button data-action="sleep">🌙 Sleep</button><button data-action="pet">♥ Pet</button><button data-action="gift">🎁 Give Gift</button></div></section>
+    <section id="inventory" class="section page-card"><h1>🧰 Inventory</h1><p>Your collected items.</p><div class="inventory-grid card"><div>🍖<b>Pet Food</b><small>12 pieces</small></div><div>🎁<b>Gift Box</b><small>4 pieces</small></div><div>🧸<b>Toy</b><small>3 pieces</small></div><div>💎<b>XP Crystal</b><small>2 pieces</small></div></div></section>
+    <section id="memory" class="section page-card"><h1>🧠 Pet Memory</h1><p>Things Riya remembers about you.</p><div class="memory-list card"><p>💙 You love coding, AI and futuristic technology.</p><p>🐾 You always come back to take care of Riya.</p><p>🎮 Riya loves playing games with you.</p><p>⭐ Your friendship level is growing every day.</p></div></section>
+    <section id="evolution" class="section page-card"><h1>🧬 Evolution</h1><p>Care, play and friendship unlock new forms.</p><div class="evo-large card"><div>🐕<b>Baby</b><small>0–5 days</small></div><div>🐺<b>Young</b><small>6–15 days</small></div><div>🐺<b>Adult</b><small>16–30 days</small></div><div>✨🐺<b>AI Companion</b><small>31–60 days</small></div><div>💜🐺<b>Legendary</b><small>60+ days</small></div></div></section>
+    <section id="settings" class="section page-card"><h1>⚙ Settings</h1><p>Customize your AI pet experience.</p><div class="settings card"><label>Pet name <input value="Riya" id="petName"></label><label>Notifications <input type="checkbox" checked></label><label>Dark neon theme <input type="checkbox" checked></label><button id="saveSettings">Save Settings</button></div></section>
+  </main>
+</div>
+<div id="toast"></div>
+<script src="script.js"></script>
+</body>
+</html>
